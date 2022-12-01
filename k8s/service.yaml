@@ -6,6 +6,6 @@ spec:
   type: LoadBalancer
   ports:
     - name: http
-      port: 8080
+      port: 3000
   selector:
     app: monorepo-consumer
