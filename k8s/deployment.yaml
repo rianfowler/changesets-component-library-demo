@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: monorepo-consumer
+spec:
+  selector:
+    matchLabels:
+      app: monorepo-consumer
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: monorepo-consumer
+    spec:
+      containers:
+      - name: monorepo-consumer
+        image: okteto.dev/monorepo-consumer:latest
+        ports:
+        - containerPort: 8080
