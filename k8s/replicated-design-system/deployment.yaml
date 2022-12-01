@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: replicated-design-system
+spec:
+  selector:
+    matchLabels:
+      app: replicated-design-system
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: replicated-design-system
+    spec:
+      containers:
+      - name: replicated-design-system
+        image: okteto.dev/replicated-design-system:latest
+        ports:
+        - containerPort: 8080
