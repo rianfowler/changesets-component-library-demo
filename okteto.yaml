@@ -8,4 +8,4 @@ build:
      context: ./replicated-design-system
      dockerfile: replicated-design-system/Dockerfile
 deploy:
-  - kubectl apply -f k8s
+  - kubectl apply -f k8s --recursive
