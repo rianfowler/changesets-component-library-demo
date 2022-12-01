@@ -7,4 +7,5 @@ spec:
   ports:
     - name: http
       port: 8080
-  selector: app: monorepo-consumer
+  selector:
+    app: monorepo-consumer
