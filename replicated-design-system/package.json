@@ -74,8 +74,5 @@
     "prettier": "^2.7.1"
   },
   "main": "dist/index.js",
-  "license": "MIT",
-  "overrides": {
-    "babel-loader": "8.1.0"
-  }
+  "license": "MIT"
 }
