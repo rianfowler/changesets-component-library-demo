@@ -45,4 +45,4 @@ COPY . .
 
 # COPY ./nginx.conf /etc/nginx/nginx.conf
 
-ENTRYPOINT npm start
+ENTRYPOINT npm run storybook
