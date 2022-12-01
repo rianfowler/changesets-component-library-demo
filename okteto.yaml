@@ -1,0 +1,7 @@
+build:
+  monorepo-consumer:
+     image: okteto.dev/monorepo-consumer:latest
+     context: .
+     dockerfile: monoreop-consumer/Dockerfile
+deploy:
+  - kubectl apply -f k8s
