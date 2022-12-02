@@ -14,7 +14,8 @@ dev:
     command: npm start
     sync:
       - monorepo-consumer/src:/src
-      - replicated-design-system/dist:/rian-replicated-design-system
+    externalVolumes:
+      - replicated-design-system-dist:/rian-replicated-design-system
   # replicated-design-system:
   #   command: npm run storybook
   #   sync:
