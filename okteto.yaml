@@ -9,3 +9,12 @@ build:
      dockerfile: replicated-design-system/Dockerfile
 deploy:
   - kubectl apply -f k8s --recursive
+dev:
+  monorepo-consumer:
+    command: npm start
+    sync:
+      - ./monorepo-consumer/src:/src
+  replicated-design-system:
+    command: npm run storybook
+    sync:
+      - ./replicated-design-system/src:/src
