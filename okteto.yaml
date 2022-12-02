@@ -13,8 +13,8 @@ dev:
   monorepo-consumer:
     command: npm start
     sync:
-      - ./monorepo-consumer/src:/src
+      - monorepo-consumer/src:/src
   replicated-design-system:
     command: npm run storybook
     sync:
-      - ./replicated-design-system/src:/src
+      - replicated-design-system/src:/src
