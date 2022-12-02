@@ -3,10 +3,10 @@ build:
      image: okteto.dev/monorepo-consumer:latest
      context: ./monorepo-consumer
      dockerfile: monorepo-consumer/Dockerfile
-  replicated-design-system:
-     image: okteto.dev/replicated-design-system:latest
-     context: ./replicated-design-system
-     dockerfile: replicated-design-system/Dockerfile
+  # replicated-design-system:
+  #    image: okteto.dev/replicated-design-system:latest
+  #    context: ./replicated-design-system
+  #    dockerfile: replicated-design-system/Dockerfile
 deploy:
   - kubectl apply -f k8s --recursive
 dev:
@@ -14,7 +14,7 @@ dev:
     command: npm start
     sync:
       - monorepo-consumer/src:/src
-  replicated-design-system:
-    command: npm run storybook
-    sync:
-      - replicated-design-system/src:/src
+  # replicated-design-system:
+  #   command: npm run storybook
+  #   sync:
+  #     - replicated-design-system/src:/src
